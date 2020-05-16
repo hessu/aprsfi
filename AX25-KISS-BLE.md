@@ -11,12 +11,15 @@ Apple iOS (iPhones, iPads) does not allow apps to talk to USB devices
 or classic Bluetooth devices (Bluetooth Serial profile).  Apps can,
 however, talk to BLE devices just fine.
 
+BLE is available to Android and other devices just as well. It's just that
+on iOS there's no other option.
+
 BLE allows the apps to discover nearby BLE devices which support a specific
 profile.  An APRS app can neatly show TNCs (and TNCs only) and let the user
 pick one from a list.
 
 This protocol is currently implemented by the aprs.fi iOS iPhone & iPad
-application, and the Mobilinkd TNC3.  Authors and of both products sincerely
+application, and the Mobilinkd TNC3.  Authors of both products sincerely
 hope that other future BLE-capable TNCs and APRS radios would implement the
 same protocol, so that the ecosystem could grow faster without a lot of
 reimplementation work.
@@ -193,6 +196,9 @@ If you wish to provide an open protocol for extended features like this,
 please submit a pull request to document it here.  This will help other
 apps to support your hardware.
 
+For example, if SMACK, TNC2 command mode, or other alternate protocol needs
+to be implemented, separate characteristic UUIDs should be used.
+
 
 Final notes
 --------------
@@ -212,6 +218,10 @@ https://github.com/mobilinkd/tnc3-firmware
 References
 -------------
 
+* Adafruit Introduction to Bluetooth Low Energy: GATT:
+  https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gatt
+* Getting Started with Bluetooth Low Energy:
+  https://www.oreilly.com/library/view/getting-started-with/9781491900550/ch04.html
 * KISS: https://en.wikipedia.org/wiki/KISS_(TNC)
 * AX.25 v2.2: https://www.tapr.org/pdf/AX25.2.2.pdf
 
